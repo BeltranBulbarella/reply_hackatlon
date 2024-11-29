@@ -1,6 +1,18 @@
-# Academic Course Assistant - README
+# Academic and Career Assistant - README
 
-Welcome to the **Academic Course Assistant**, an AI-powered tool designed to provide comprehensive information about university courses. This assistant utilizes OpenAI's language models to generate course summaries, assess complexity, create multiple-choice questions, and more, based on provided course data.
+Welcome to the **Academic and Career Assistant**, an AI-powered tool designed to provide comprehensive information about university courses and offer personalized career guidance. This assistant utilizes OpenAI's language models to generate course summaries, assess complexity, create multiple-choice questions, and more, based on provided course data. It also helps users explore professional fields, find job or internship opportunities, and generate resumes based on their educational path and interests.
+
+## Demo
+
+
+https://github.com/user-attachments/assets/b3a7fb0f-8df7-4203-b989-8f6db002f585
+
+
+
+https://github.com/user-attachments/assets/c804f0af-6ac8-4a7a-ae2e-c9357e76d9ed
+
+
+
 
 ## Table of Contents
 
@@ -11,8 +23,14 @@ Welcome to the **Academic Course Assistant**, an AI-powered tool designed to pro
 - [Usage](#usage)
   - [Running the Application](#running-the-application)
   - [Using the Application](#using-the-application)
+    - [Academic Assistance](#academic-assistance)
+    - [Career Guidance](#career-guidance)
 - [Project Structure](#project-structure)
 - [Customization](#customization)
+  - [Adding or Modifying Courses](#adding-or-modifying-courses)
+  - [Adding or Modifying Career Data](#adding-or-modifying-career-data)
+  - [Changing the OpenAI Model](#changing-the-openai-model)
+  - [Adjusting the Temperature](#adjusting-the-temperature)
 - [Notes and Considerations](#notes-and-considerations)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -21,7 +39,11 @@ Welcome to the **Academic Course Assistant**, an AI-powered tool designed to pro
 
 ## Overview
 
-The Academic Course Assistant is a Streamlit web application that interacts with OpenAI's GPT models to provide detailed information about university courses. By leveraging a simulated database of course data and student feedback, the assistant can:
+The **Academic and Career Assistant** is a Streamlit web application that interacts with OpenAI's GPT models to provide detailed information about university courses and personalized career guidance.
+
+### Academic Assistance
+
+By leveraging a simulated database of course data and student feedback, the assistant can:
 
 - Generate concise course summaries.
 - Assess the overall complexity of a course.
@@ -30,15 +52,26 @@ The Academic Course Assistant is a Streamlit web application that interacts with
 - Estimate the content distribution across different subjects (e.g., Mathematics, Physics, Computer Science).
 - Indicate whether a course provides a polycopy (course booklet).
 
+### Career Guidance
+
+Based on the user's educational path, interests, and professional experience, the assistant can:
+
+- Generate a list of suitable professional fields.
+- Retrieve job or internship opportunities in those fields.
+- Provide brief summaries of job roles.
+- Retrieve LinkedIn profiles of alumni in similar roles.
+- Provide salary information for the selected jobs.
+- Generate sample resumes tailored to the user's background and chosen field.
+
 ---
 
 ## Features
 
 - **User-Friendly Interface:** An interactive web app built with Streamlit.
 - **AI-Powered Responses:** Utilizes OpenAI's GPT models for natural language processing.
-- **Customizable Data:** Easily extend or modify the course database.
+- **Customizable Data:** Easily extend or modify the course and career databases.
 - **Modular Architecture:** Clean separation of concerns with agents handling specific tasks.
-- **Scalable Design:** Capable of adding more courses and features as needed.
+- **Scalable Design:** Capable of adding more courses, career data, and features as needed.
 
 ---
 
@@ -55,8 +88,8 @@ The Academic Course Assistant is a Streamlit web application that interacts with
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/academic-course-assistant.git
-   cd academic-course-assistant
+   git clone https://github.com/yourusername/academic-career-assistant.git
+   cd academic-career-assistant
    ```
 
 2. **Create a Virtual Environment (Optional but Recommended)**
@@ -122,7 +155,7 @@ The Academic Course Assistant is a Streamlit web application that interacts with
 1. **Navigate to the Project Directory**
 
    ```bash
-   cd academic-course-assistant
+   cd academic-career-assistant
    ```
 
 2. **Run the Streamlit App**
@@ -137,7 +170,13 @@ The Academic Course Assistant is a Streamlit web application that interacts with
 
 ### Using the Application
 
-1. **Enter the Course Name**
+Upon accessing the application, you will have the option to select between **Academic Assistance** and **Career Guidance** from the sidebar.
+
+#### Academic Assistance
+
+1. **Select "Academic Assistance"** from the sidebar.
+
+2. **Enter the Course Name**
 
    - In the text input field, enter the name of the course you're interested in. For example:
 
@@ -145,7 +184,7 @@ The Academic Course Assistant is a Streamlit web application that interacts with
      Calcul Haute Performance
      ```
 
-2. **Select the Desired Information**
+3. **Select the Desired Information**
 
    - Check the boxes for the information you want to retrieve:
 
@@ -156,27 +195,81 @@ The Academic Course Assistant is a Streamlit web application that interacts with
      - Content distribution
      - Polycopy availability
 
-3. **Submit the Request**
+4. **Submit the Request**
 
    - Click the **Submit** button to process your request.
 
-4. **View the Results**
+5. **View the Results**
 
    - The assistant will display the requested information below the submit button, organized by headings.
+
+#### Career Guidance
+
+1. **Select "Career Guidance"** from the sidebar.
+
+2. **Provide Your Information**
+
+   - **Educational Path:** Describe your educational background.
+
+     _Example: "Master's degree in Computer Science with a focus on machine learning."_
+
+   - **Interests:** List your interests.
+
+     _Example: "Data science, artificial intelligence, software development."_
+
+   - **Professional Experience:** Describe your professional experience.
+
+     _Example: "Internship at XYZ Corp as a software developer."_
+
+3. **Generate Professional Fields**
+
+   - Click the **"Generate Professional Fields"** button.
+
+   - The assistant will generate a list of suitable professional fields based on your inputs.
+
+4. **Select Job or Internship**
+
+   - Choose whether you're searching for a **Job** or **Internship**.
+
+5. **Find Opportunities**
+
+   - Click the **"Find Opportunities"** button.
+
+   - The assistant will retrieve job or internship opportunities, provide job summaries, LinkedIn profiles, salary information, and display the data in a table.
+
+6. **Generate Resumes (Optional)**
+
+   - If you wish to generate sample resumes, check the **"Generate Resumes"** checkbox.
+
+   - Select the professional field you're interested in from the dropdown.
+
+   - Click the **"Generate Resumes"** button to receive sample resumes tailored to your background and chosen field.
 
 ---
 
 ## Project Structure
 
 ```
-academic-course-assistant/
+academic-career-assistant/
 ├── app.py
+├── agents/
+│   ├── academic_agents.py
+│   ├── career_agents.py
+├── ui/
+│   ├── academic_course_assistant.py
+│   ├── career_guidance.py
+├── utils/
+│   ├── openai_utils.py
+│   ├── simulated_db.py
 ├── requirements.txt
 ├── README.md
 └── .env (optional)
 ```
 
-- **app.py:** The main application script containing all the code.
+- **app.py:** The main application script that runs the Streamlit app.
+- **agents/:** Contains the agent scripts for academic assistance and career guidance.
+- **ui/:** Contains the user interface components for each assistant.
+- **utils/:** Contains utility scripts, including OpenAI API utilities and simulated databases.
 - **requirements.txt:** Lists the Python dependencies.
 - **README.md:** This readme file.
 - **.env:** Optional file to store environment variables.
@@ -189,7 +282,7 @@ academic-course-assistant/
 
 - **Updating `course_database`:**
 
-  - In `app.py`, locate the `course_database` variable.
+  - In `utils/simulated_db.py`, locate the `course_database` variable.
   - Add new courses or modify existing ones using the provided structure.
 
     ```python
@@ -202,11 +295,64 @@ academic-course-assistant/
     }
     ```
 
+### Adding or Modifying Career Data
+
+- **Updating Simulated Databases:**
+
+  - **Job Database (`job_database`):** Located in `utils/simulated_db.py`.
+
+    ```python
+    job_database = [
+        {
+            "company": "Company Name",
+            "job_title": "Job Title",
+            "professional_field": "Professional Field"
+        },
+        # Add more job listings here...
+    ]
+    ```
+
+  - **Company Partnerships (`company_partnerships`):**
+
+    ```python
+    company_partnerships = [
+        "Company A",
+        "Company B",
+        # Add more companies here...
+    ]
+    ```
+
+  - **Alumni Profiles (`alumni_profiles`):**
+
+    ```python
+    alumni_profiles = [
+        {
+            "name": "Alumni Name",
+            "job_title": "Job Title",
+            "company": "Company Name",
+            "linkedin_url": "https://linkedin.com/in/username",
+            "electives": ["Elective 1", "Elective 2"]
+        },
+        # Add more profiles here...
+    ]
+    ```
+
+  - **Salary Database (`salary_database`):**
+
+    ```python
+    salary_database = {
+        "Job Title": {
+            "average_salary": "$XX,XXX"
+        },
+        # Add more salary data here...
+    }
+    ```
+
 ### Changing the OpenAI Model
 
 - **Modify the Model Used:**
 
-  - In the `call_openai_api` function, you can change the `model` parameter.
+  - In `utils/openai_utils.py`, you can change the `model` parameter in the `call_openai_api` function.
 
     ```python
     def call_openai_api(prompt, model="gpt-3.5-turbo", temperature=0):
@@ -235,7 +381,7 @@ academic-course-assistant/
 
 - **Data Privacy:**
 
-  - Ensure that any real student data complies with privacy regulations.
+  - Ensure that any real student or professional data complies with privacy regulations.
   - The provided data is simulated for demonstration purposes.
 
 - **Error Handling:**
@@ -264,4 +410,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Disclaimer:** This application is intended for educational and demonstration purposes. The course data and student feedback are simulated and may not reflect actual courses or opinions.
+**Disclaimer:** This application is intended for educational and demonstration purposes. The course data, student feedback, and career data are simulated and may not reflect actual courses, opinions, or job opportunities.
+
+---
+
+I've updated the README to include the new **Career Guidance** functionality, providing comprehensive instructions and information about the application's features, usage, and structure. If you have any further questions or need additional modifications, please let me know!
