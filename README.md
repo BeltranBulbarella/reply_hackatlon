@@ -413,5 +413,3 @@ This project is licensed under the [MIT License](LICENSE).
 **Disclaimer:** This application is intended for educational and demonstration purposes. The course data, student feedback, and career data are simulated and may not reflect actual courses, opinions, or job opportunities.
 
 ---
-
-I've updated the README to include the new **Career Guidance** functionality, providing comprehensive instructions and information about the application's features, usage, and structure. If you have any further questions or need additional modifications, please let me know!
